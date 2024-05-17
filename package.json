@@ -1,0 +1,25 @@
+{
+  "devDependencies": {
+    "grpc-tools": "^1.12.4",
+    "typescript": "^5.4.5"
+  },
+  "name": "comment-service",
+  "version": "1.0.0",
+  "description": "comment service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rizqi",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.10.7",
+    "dotenv": "^16.4.5",
+    "grpc_tools_node_protoc_ts": "^5.3.3",
+    "i": "^0.3.7",
+    "mongoose": "^8.3.4",
+    "npm": "^10.7.0",
+    "protoc-gen-js": "^3.21.2",
+    "ts-dotenv": "^0.9.1"
+  }
+}

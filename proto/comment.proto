@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+
+message comment {
+    string id = 1;
+    string userName = 2;
+    string comment = 3;
+    string userId = 4;
+    google.protobuf.Timestamp created_at = 5;
+    google.protobuf.Timestamp updated_at = 6;
+    google.protobuf.Timestamp deleted_at = 7;
+}
+
+service commentService {
+    rpc CreateComment(createCommentRequest) returns (commonRespone){};
+    rpc UpdateComment(updateCommentRequest) returns (commonRespone){};
+    rpc GetCommentById(getCommentByIdRequest) returns (getCommentByIdResponse){};
+    rpc DeleteComment(deleteRequest) returns (commonRespone){};
+}
+
+message commonRespone {
+    string message = 1;
+}
+
+//create
+message createCommentRequest {
+    string username = 1;
+    string comment = 2;
+    string userId = 3;
+}
+
+//update
+message updateCommentRequest {
+    string username = 1;
+    string comment = 2;
+    string userId = 3;
+}
+
+//getId
+message getCommentByIdRequest {
+    string userId = 1;
+}
+
+message getCommentByIdResponse{
+    comment comment = 1;
+}
+
+//delete
+message deleteRequest{
+    string userId = 1;
+}
+
